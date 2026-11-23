@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f6ef" />
+    <meta name="description" content="Small-batch honey, desi ghee and farm-fresh goodness from Azza Organics." />
+    <title>Azza Organics — Goodness, naturally</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  <body>
+    <div class="announcement">
+      <span>Small-batch goodness, delivered with care</span>
+      <a href="https://wa.me/923076158708" target="_blank" rel="noreferrer">Questions? Chat with us <span aria-hidden="true">↗</span></a>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Azza Organics home">
+        <img class="brand-image" src="assets/azza-organics-logo.png" alt="Azza Organics — Crafted for True Taste" />
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop all</a>
+        <a href="#about">About us</a>
+        <a href="#contact">Contact us</a>
+      </nav>
+
+      <div class="header-actions">
+        <label class="header-search" aria-label="Search products">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4.2 4.2"></path></svg>
+          <input id="search-input" type="search" placeholder="Search..." autocomplete="off" />
+        </label>
+        <button class="icon-button" id="theme-toggle" aria-label="Switch color theme" title="Switch color theme">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.4A8.7 8.7 0 0 1 8.6 3.8 8.8 8.8 0 1 0 20.2 15.4Z"></path></svg>
+        </button>
+        <button class="icon-button count-button" id="wishlist-button" aria-label="Open wishlist">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.7c0 5.2-8.8 11-8.8 11s-8.8-5.8-8.8-11a4.7 4.7 0 0 1 8.8-2.2 4.7 4.7 0 0 1 8.8 2.2Z"></path></svg>
+          <span class="count-badge" id="wishlist-count">0</span>
+        </button>
+        <button class="icon-button count-button" id="cart-button" aria-label="Open shopping bag">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l1.2 12H3.8L5 8Z"></path><path d="M9 9V6a3 3 0 0 1 6 0v3"></path></svg>
+          <span class="count-badge" id="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> FROM OUR LAND TO YOUR TABLE</p>
+          <h1>Goodness,<br /><em>grown</em> naturally.</h1>
+          <p class="hero-description">Honest food, made the way it should be. Bring a little more nature to your everyday table.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#shop">Explore the pantry <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#about">Our promise <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero-note"><span class="note-stars" aria-hidden="true">✳</span><span>Real ingredients. Thoughtful sourcing.<br />Nothing you don't need.</span></div>
+        </div>
+        <div class="hero-art" role="img" aria-label="A table with natural, wholesome ingredients">
+          <div class="hero-photo"></div>
+          <div class="hero-stamp"><span>GOOD<br />FOOD</span><span class="stamp-star">✳</span><span>GOOD<br />LIVING</span></div>
+          <div class="hero-caption"><span>01 / 03</span><span>Rooted in nature, made for you</span></div>
+        </div>
+        <div class="hero-side-label">NATURE, WITH NOTHING TO HIDE</div>
+      </section>
+
+      <section class="trust-strip" aria-label="Our values">
+        <div><span class="trust-icon">✳</span><span>Small-batch &amp; carefully made</span></div>
+        <div><span class="trust-icon">◌</span><span>Simple, honest ingredients</span></div>
+        <div><span class="trust-icon">♡</span><span>Goodness from farm to home</span></div>
+      </section>
+
+      <section class="shop-section section-wrap" id="shop">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> THE GOOD STUFF</p>
+            <h2>Our pantry <em>favorites</em></h2>
+          </div>
+          <p class="section-intro">The everyday essentials you know and love, made a little more thoughtfully.</p>
+        </div>
+
+        <div class="shop-toolbar">
+          <div class="category-tabs" id="category-tabs" aria-label="Filter by category"></div>
+          <div class="shop-filters">
+            <label class="price-filter"><span>Price</span><span class="price-field"><span>Rs.</span><input id="min-price" type="number" min="0" max="100000" value="0" aria-label="Minimum price" /></span><span class="filter-dash">—</span><span class="price-field"><span>Rs.</span><input id="max-price" type="number" min="0" max="100000" value="5000" aria-label="Maximum price" /></span></label>
+            <label class="sort-filter"><span class="visually-hidden">Sort products</span><select id="sort-select"><option value="popular">Best selling</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="name">Name: A to Z</option></select></label>
+          </div>
+        </div>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <p class="empty-state hidden" id="empty-products">Nothing in the pantry matches that search. Try another filter.</p>
+      </section>
+
+      <section class="feature-band" id="about">
+        <div class="feature-image" role="img" aria-label="Fresh honey and wholesome ingredients"></div>
+        <div class="feature-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> ABOUT AZZA ORGANICS</p>
+          <h2>From the earth.<br /><em>With care.</em></h2>
+          <p>Azza Organics brings together thoughtfully sourced honey, desi ghee, farm eggs and pantry favorites. We believe good food starts with respect for the land, the people who nurture it, and the families who bring it home. No fuss, no shortcuts — just honest goodness, made to be shared.</p>
+          <a class="text-link" href="#shop">Find your favorites <span aria-hidden="true">→</span></a>
+          <div class="feature-signature">Naturally, Azza <span>✳</span></div>
+        </div>
+      </section>
+
+      <section class="contact-section section-wrap" id="contact">
+        <div class="contact-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> WE'RE HERE FOR YOU</p>
+          <h2>A question?<br /><em>We're all ears.</em></h2>
+          <p>Need a little help or want to know more about what goes into your pantry? Leave us a note or reach out on WhatsApp.</p>
+          <a class="text-link" href="https://wa.me/923076158708" target="_blank" rel="noreferrer">Chat on WhatsApp <span aria-hidden="true">↗</span></a>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <label>Your name<input name="name" required maxlength="80" placeholder="How should we address you?" /></label>
+          <label>Email address<input name="email" type="email" required maxlength="160" placeholder="you@example.com" /></label>
+          <label>Your message<textarea name="message" rows="3" required maxlength="1200" placeholder="Tell us what's on your mind..."></textarea></label>
+          <button class="button button-dark" type="submit">Send us a note <span aria-hidden="true">↗</span></button>
+          <p class="form-feedback" id="contact-feedback" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="legal-section section-wrap" id="privacy-policy">
+        <div class="legal-heading">
+          <p class="eyebrow"><span class="eyebrow-line"></span> YOUR INFORMATION</p>
+          <h2>Privacy <em>policy</em></h2>
+        </div>
+        <div class="legal-copy">
+          <p>This storefront demo stores your cart, wishlist, order history, product catalog and contact messages in local storage in the browser you are using. The demo does not send those records to a shared database, so they are not available on other devices and may be removed when browser data is cleared.</p>
+          <p>When you choose to order, the site opens WhatsApp with your order details so you can send them to Azza Organics. WhatsApp handles that message under its own privacy terms. Please do not enter sensitive personal information into this demo.</p>
+          <p>For questions about information you have sent to us, contact <a href="mailto:azaaorganics@gmail.com">azaaorganics@gmail.com</a>.</p>
+        </div>
+      </section>
+
+      <section class="legal-section legal-section-alt section-wrap" id="terms">
+        <div class="legal-heading">
+          <p class="eyebrow"><span class="eyebrow-line"></span> BEFORE YOU ORDER</p>
+          <h2>Terms &amp; <em>conditions</em></h2>
+        </div>
+        <div class="legal-copy">
+          <p>Placing an order through this demo sends an order request only. There is no online payment. Azza Organics will confirm product availability, final pricing and delivery arrangements with you on WhatsApp before the order is accepted.</p>
+          <p>Product photos and descriptions are provided to help you browse. Product sizes, prices and availability may change; the details confirmed by Azza Organics at the time of your order will apply.</p>
+          <p>By submitting an order request, you confirm that the contact and delivery details you provide are accurate and that Azza Organics may use them to follow up about that request.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a class="brand brand-light" href="#home">
+            <img class="brand-image" src="assets/azza-organics-logo.png" alt="Azza Organics — Crafted for True Taste" />
+          </a>
+          <p>A little more nature<br />in your everyday.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Explore</h3>
+          <a href="#home">Home</a>
+          <a href="#shop">Shop all</a>
+          <a href="#about">About us</a>
+          <a href="#contact">Contact us</a>
+        </div>
+        <div class="footer-links">
+          <h3>Say hello</h3>
+          <a href="mailto:azaaorganics@gmail.com">azaaorganics@gmail.com</a>
+          <a href="https://wa.me/923076158708" target="_blank" rel="noreferrer">WhatsApp: 0307 6158708</a>
+        </div>
+        <div class="footer-links">
+          <h3>Follow along</h3>
+          <a class="social-link" href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+            <svg class="social-icon instagram-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle class="social-icon-dot" cx="17.5" cy="6.8" r="1"></circle></svg>
+            Instagram <span>↗</span>
+          </a>
+          <a class="social-link" href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+            <svg class="social-icon facebook-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.3-1.5 1.5-1.5h1.7V3.7c-.8-.1-1.6-.2-2.5-.2-2.5 0-4.3 1.5-4.3 4.4v2H7.1V13h2.8v8z"></path></svg>
+            Facebook <span>↗</span>
+          </a>
+          <a class="social-link" href="https://www.tiktok.com/" target="_blank" rel="noreferrer">
+            <svg class="social-icon tiktok-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 8.7a6.7 6.7 0 0 1-4-1.3v7.3a5.2 5.2 0 1 1-4.4-5.1v3.2a2.1 2.1 0 1 0 1.3 2V3h3.1a6.7 6.7 0 0 0 4 4.1z"></path></svg>
+            TikTok <span>↗</span>
+          </a>
+        </div>
+        <div class="footer-links footer-admin">
+          <h3>For the team</h3>
+          <button class="footer-admin-link" id="admin-button">Open admin panel <span>↗</span></button>
+          <a href="#privacy-policy">Privacy policy</a>
+          <a href="#terms">Terms &amp; conditions</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="current-year"></span> Azza Organics. Made with care.</span><span>Design by <strong>Choudhary Yasir</strong></span></div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="overlay hidden" id="overlay" aria-hidden="true"></div>
+  </body>
+</html>
